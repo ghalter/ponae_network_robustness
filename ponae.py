@@ -1,3 +1,9 @@
+"""
+Author: Gaudenz Halter
+2020
+
+"""
+
 import numpy as np
 import typing
 from random import randint, shuffle, random
@@ -11,6 +17,7 @@ from matplotlib import cm
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 
 import networkx as nx
+
 
 class MainWindow(QMainWindow):
     def __init__(self, parent):
@@ -426,7 +433,6 @@ class MatplotlibWidget(QDockWidget):
         self.canvas.draw()
 
 
-
 def my_exception_hook(exctype, value, traceback):
     # Print the error and traceback
     print((exctype, value, traceback))
@@ -451,8 +457,4 @@ if __name__ == '__main__':
     main.show()
     sys.exit(app.exec_())
 
-"""
-Modify base on:
-http://stackoverflow.com/questions/36086361/embed-matplotlib-in-pyqt-with-multiple-plot/36093604
 
-"""
